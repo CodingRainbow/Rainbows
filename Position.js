@@ -76,7 +76,7 @@ Position.prototype.reinit = function(px, py, minspeed, maxspeed, maxrot) {
   //trace("a Pos reinit");
   this.p.set(px, py);
 
-  this.dir = random(360);
+  this.dir = random(TWO_PI);
   this.isAvoiding = false;
 
   this.setSpeed(minspeed, maxspeed);

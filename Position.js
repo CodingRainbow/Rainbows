@@ -143,8 +143,8 @@ Position.prototype.update = function() {
   this.dirD.update();
 
   this.dir += this.dirD.val;
-  if (this.dir > 360) this.dir -= 360;
-  else if (this.dir < 0) this.dir = this.dir + 360;
+  if (this.dir > TWO_PI) this.dir -= TWO_PI;
+  else if (this.dir < 0) this.dir = this.dir + TWO_PI;
 
   this.dirV.set(cos(this.dir), sin(this.dir));
   this.p.add(this.dirV.x * this.speed.val, this.dirV.y * this.speed.val);
